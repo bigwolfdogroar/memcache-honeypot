@@ -147,12 +147,8 @@ get key1 key2 key3
 实验环境：    
 
     客户端：
-            win10 Thinkpad X220T 笔记本一台
-            192.168.1.109
-            python3.6、wireshark、gitbash
+            win10、python3.6、wireshark、gitbash
     服务端：
-            Centos T_cloud  腾讯云服务器一台
-            123.207.162.113
             memcached-1.2.2、libevent-1.3、tcpdump-4.1
 
 **上传有效载荷**
@@ -212,8 +208,8 @@ print('send seccuss...')
 可见服务端是可以收到，并且回复了值。但是发送的包**27-30**四个字节的源ip地址被更改。  
 查资料发现有的网络环境里面会被一些路由器纠正源地址，使得反射攻击失败。究其原因是因为其增加的uRPF机制，（Unicast Reverse Path Forwarding是一种单播反向路由查找技术，用于防止基于源地址欺骗的网络攻击行为。）重新修复了UDP源地址伪造。  
 
-主要参考：
- https://blog.csdn.net/bjtbjt/article/details/79262549
+主要参考：  
+ https://blog.csdn.net/bjtbjt/article/details/79262549  
  http://blog.nsfocus.net/memcached-drdos-analysis/
 
 
@@ -245,4 +241,8 @@ print('send seccuss...')
     ————————————————————   极限为524250.5 约 52.4W倍
           15 + 2x
 
-**以上即为文档全部内容**
+
+最后，笔者做了一个memcache_ddos蜜罐。  
+项目地址：https://github.com/bigwolfdogroar/memcache-honeypot  
+
+  **以上即为文档全部内容**
