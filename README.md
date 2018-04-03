@@ -1,10 +1,14 @@
-# memcached ddos攻击原理文档 && 低交互的memcached ddos蜜罐。
+# memcached ddos攻击原理文档  
+# &&  
+# 低交互的memcached ddos蜜罐。
 
-关于文档部分：
+# 文档：
 
 1. 解释memcached ddos原理。
 
-2. 对于不同的攻击方式，计算出最大放大倍数
+2. 对于不同的攻击方式，计算出最大放大倍数  
+
+
 
 # 蜜罐：
 
